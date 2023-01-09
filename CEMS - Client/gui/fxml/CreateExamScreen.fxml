@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="1044.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CreateExamController">
+   <children>
+      <ImageView fitHeight="692.0" fitWidth="1044.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/BackGround.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="58.0" fitWidth="133.0" layoutX="910.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnExit" layoutX="973.0" layoutY="647.0" mnemonicParsing="false" onAction="#ExitBtn" text="Close" textFill="#ff1919">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="77.0" layoutY="119.0" text="Profession:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="372.0" layoutY="119.0" text="Course:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="650.0" layoutY="120.0" text="Questions:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="522.0" text="Duration:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="356.0" text="Teacher Notes:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Durationtxtfield" layoutX="167.0" layoutY="522.0" prefHeight="31.0" prefWidth="104.0" />
+      <Button fx:id="Createbtn" layoutX="593.0" layoutY="586.0" mnemonicParsing="false" onAction="#CreateClick" prefHeight="39.0" prefWidth="90.0" style="-fx-border-color: GREEN; -fx-border-width: 2;" text="Create">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="452.0" layoutY="43.0" text="Create Exam" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="111.0" text="*" textFill="RED" />
+      <Label layoutX="367.0" layoutY="114.0" text="*" textFill="RED" />
+      <Label layoutX="645.0" layoutY="116.0" text="*" textFill="RED" />
+      <TextArea fx:id="TeacherNtxtArea" layoutX="78.0" layoutY="386.0" prefHeight="115.0" prefWidth="268.0" promptText="Notes for teachers" />
+      <Label layoutX="72.0" layoutY="516.0" text="*" textFill="RED" />
+      <TextArea fx:id="QtextArea" editable="false" layoutX="74.0" layoutY="172.0" prefHeight="92.0" prefWidth="832.0" promptText="Question Details" />
+      <Label layoutX="345.0" layoutY="280.0" text="Points:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="340.0" layoutY="275.0" text="*" textFill="RED" />
+      <TextField fx:id="Pointstxt" layoutX="420.0" layoutY="281.0" prefHeight="31.0" prefWidth="177.0" promptText="Points for the question" />
+      <Button fx:id="Addbtn" layoutX="617.0" layoutY="277.0" mnemonicParsing="false" onAction="#AddClicked" prefHeight="39.0" prefWidth="141.0" text="Add question">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="ExamSumbtn" layoutX="410.0" layoutY="586.0" mnemonicParsing="false" onAction="#ExamSumClick" prefHeight="39.0" prefWidth="161.0" style="-fx-border-color: blue; -fx-border-width: 2;" text="Exam Summary">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="75.0" layoutY="565.0" text="*-Required Fields" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="ComBoxProf" layoutX="183.0" layoutY="117.0" onAction="#ShowSelected" prefWidth="150.0" />
+      <ComboBox fx:id="ComBoxCourse" layoutX="447.0" layoutY="117.0" onAction="#ShowSelectedQ" onMouseClicked="#ShowSelectionQu" prefWidth="150.0" />
+      <ComboBox fx:id="ComBoxQ" layoutX="756.0" layoutY="119.0" onAction="#ShowQuestion" prefWidth="150.0" />
+      <Label layoutX="374.0" layoutY="359.0" text="Student Notes:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="StudnetNTxtArea" layoutX="371.0" layoutY="387.0" prefHeight="115.0" prefWidth="275.0" promptText="Notes for student" />
+      <Label fx:id="Overallpts" layoutX="428.0" layoutY="321.0" text="Overall Points:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

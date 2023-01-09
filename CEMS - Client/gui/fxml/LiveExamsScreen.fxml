@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LiveExamsController">
+   <children>
+      <ImageView fitHeight="662.0" fitWidth="776.0" layoutX="-6.0" layoutY="-3.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/BackGround.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="58.0" fitWidth="133.0" layoutX="637.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnExit" layoutX="695.0" layoutY="611.0" mnemonicParsing="false" onAction="#ExitBtn" text="Close" textFill="#ff1818">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="327.0" layoutY="27.0" text="Live Exams" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblViewExams" layoutX="98.0" layoutY="92.0" prefHeight="272.0" prefWidth="588.0" stylesheets="@../css/TableView.css">
+        <columns>
+          <TableColumn fx:id="TestIDCol" prefWidth="90.0" text="Test ID" />
+            <TableColumn fx:id="ProfCol" prefWidth="116.0" text="Profession" />
+          <TableColumn fx:id="CourseCol" prefWidth="127.0" text="Course" />
+            <TableColumn fx:id="DurCol" prefWidth="136.0" text="Duration" />
+            <TableColumn fx:id="CodeCol" prefWidth="118.0" text="Code" />
+        </columns>
+      </TableView>
+      <Button fx:id="LockExambtn" layoutX="465.0" layoutY="556.0" mnemonicParsing="false" onAction="#LockExamClick" style="-fx-border-color: RED;" text="Lock Exam">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtDuration" layoutX="233.0" layoutY="383.0" prefHeight="31.0" prefWidth="125.0" promptText="New Duration" />
+      <Label layoutX="99.0" layoutY="64.0" text="Select row from the table:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="99.0" layoutY="385.0" text="New duration:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="SendReqbtn" layoutX="232.0" layoutY="556.0" mnemonicParsing="false" onAction="#SendReqClick" text="Send Request">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="txtReason" layoutX="233.0" layoutY="428.0" prefHeight="116.0" prefWidth="344.0" promptText="Enter reason for the extend" />
+      <Label layoutX="98.0" layoutY="428.0" text="Extand Reason:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

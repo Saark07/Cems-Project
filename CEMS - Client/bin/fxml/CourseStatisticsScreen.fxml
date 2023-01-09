@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CourseStatisticsController">
+   <children>
+      <ImageView fitHeight="613.0" fitWidth="863.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/BackGround1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="69.0" fitWidth="145.0" layoutX="702.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="73.0" layoutY="73.0" text="Select Proffession:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnShowStatistics" layoutX="417.0" layoutY="99.0" mnemonicParsing="false" onAction="#ShowStatisticsClick" text="Show Statistics" />
+      <Label layoutX="73.0" layoutY="165.0" text="Median:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnClose" layoutX="789.0" layoutY="568.0" mnemonicParsing="false" onAction="#CloseClick" text="Close" textFill="#ff3030">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <BarChart fx:id="DistributChart" animated="false" layoutX="8.0" layoutY="212.0" prefHeight="353.0" prefWidth="850.0" title="Distribution">
+        <xAxis>
+          <CategoryAxis fx:id="X" label="Grade Range" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="Y" autoRanging="false" label="Amount Of Exams" prefHeight="269.0" prefWidth="57.0" side="LEFT" tickUnit="1.0" upperBound="10.0" />
+        </yAxis>
+      </BarChart>
+      <Label layoutX="73.0" layoutY="200.0" text="Average:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMedian" layoutX="145.0" layoutY="165.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAverage" layoutX="145.0" layoutY="200.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="ProfCmb" layoutX="240.0" layoutY="71.0" onAction="#ShowSelected" prefWidth="150.0" />
+      <Label fx:id="noDtExist" layoutX="556.0" layoutY="102.0" text="No Data Exist">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="73.0" layoutY="121.0" text="Select Course:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="CoursesCmb" layoutX="240.0" layoutY="119.0" prefWidth="150.0" />
+      <Label layoutX="329.0" layoutY="17.0" text="Course Statistics" underline="true">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="556.0" text="Total Exams:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblExamsCnt" layoutX="120.0" layoutY="556.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="741.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TestCopyController">
+   <children>
+      <ImageView fitHeight="749.0" fitWidth="1051.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/BackGround1.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="290.0" layoutY="61.0" prefHeight="568.0" prefWidth="712.0" style="-fx-border-color: BLACK;">
+         <children>
+            <RadioButton fx:id="Choice1" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="175.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="53.0" text="1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="g1" />
+               </toggleGroup>
+            </RadioButton>
+            <TextArea fx:id="txtQuestions" editable="false" layoutX="25.0" layoutY="37.0" prefHeight="112.0" prefWidth="608.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextArea>
+            <TextField fx:id="txtAnswer1" editable="false" layoutX="79.0" layoutY="158.0" prefHeight="55.0" prefWidth="555.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtAnswer2" editable="false" layoutX="79.0" layoutY="223.0" prefHeight="55.0" prefWidth="555.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtAnswer3" editable="false" layoutX="79.0" layoutY="286.0" prefHeight="55.0" prefWidth="555.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtAnswer4" editable="false" layoutX="78.0" layoutY="349.0" prefHeight="55.0" prefWidth="555.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TextField>
+            <RadioButton fx:id="Choice2" alignment="TOP_CENTER" layoutX="22.0" layoutY="240.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="53.0" text="2" toggleGroup="$g1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="Choice3" alignment="TOP_CENTER" layoutX="22.0" layoutY="303.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="53.0" text="3" toggleGroup="$g1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="Choice4" alignment="TOP_CENTER" layoutX="22.0" layoutY="366.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="53.0" text="4" toggleGroup="$g1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </RadioButton>
+            <TextField fx:id="txtaFewQ" editable="false" layoutX="646.0" layoutY="37.0" prefHeight="55.0" prefWidth="61.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </TextField>
+            <Label fx:id="txtNunOfQ" layoutX="-1.0" layoutY="37.0" prefHeight="35.0" prefWidth="31.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnPrevQ" layoutX="133.0" layoutY="493.0" mnemonicParsing="false" onAction="#handelBtnPrev" prefHeight="44.0" prefWidth="117.0" style="-fx-border-color: red;" text="Previous">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnNextQ" layoutX="464.0" layoutY="493.0" mnemonicParsing="false" onAction="#handelBtnNext" prefHeight="46.0" prefWidth="127.0" style="-fx-border-color: green;" text="Next">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblPoints" layoutX="362.0" layoutY="13.0" text="Points:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblnoanswer" layoutX="275.0" layoutY="434.0" text="No answer select" textFill="#f50707" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnFirstQ" layoutX="275.0" layoutY="489.0" mnemonicParsing="false" onAction="#handelBtnFirstQuestions" prefHeight="54.0" prefWidth="163.0" text="First question">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="94.0" layoutY="13.0" text="Question:">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextArea fx:id="txtNotes" editable="false" layoutX="14.0" layoutY="328.0" prefHeight="144.0" prefWidth="247.0" promptText="No comments for the exam">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="labrlExplanation" layoutX="16.0" layoutY="478.0" prefHeight="35.0" prefWidth="149.0" text="Explanation:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelNotes" layoutX="15.0" layoutY="294.0" text="Notes:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnExit" layoutX="955.0" layoutY="691.0" mnemonicParsing="false" onAction="#handelBtnExit" prefHeight="44.0" prefWidth="82.0" style="-fx-text-fill: red;" text="Close">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelName" layoutX="27.0" layoutY="93.0" prefHeight="35.0" prefWidth="73.0" text="Name:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCoures" layoutX="27.0" layoutY="160.0" prefHeight="35.0" prefWidth="73.0" text="Coures:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelGrade" layoutX="27.0" layoutY="228.0" prefHeight="35.0" prefWidth="73.0" text="Grade:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="titleScreen" alignment="TOP_CENTER" layoutX="432.0" layoutY="14.0" prefHeight="38.0" prefWidth="206.0" style="-fx-background-color: white;" text="Test Exam Copy">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtName" layoutX="28.0" layoutY="130.0" prefHeight="35.0" prefWidth="223.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtGrade" layoutX="27.0" layoutY="259.0" prefHeight="35.0" prefWidth="73.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtCoures" layoutX="26.0" layoutY="192.0" prefHeight="35.0" prefWidth="247.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtExplanation" editable="false" layoutX="15.0" layoutY="517.0" prefHeight="144.0" prefWidth="247.0" promptText="No change in grade">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>

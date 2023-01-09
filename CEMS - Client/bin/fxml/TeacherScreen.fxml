@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="1044.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TeacherController">
+   <children>
+      <ImageView fitHeight="672.0" fitWidth="1052.0" layoutX="-4.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/BackGround.jpeg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblWelcome" layoutX="13.0" layoutY="21.0" prefHeight="45.0" prefWidth="533.0" text="Welcome (User Name)">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.4514563106796116" endY="0.1747572815533981" startX="0.42718446601941745">
+               <stops>
+                  <Stop color="#1d06ee" />
+                  <Stop color="#0b0a0d" offset="0.007246376811594203" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="58.0" fitWidth="133.0" layoutX="903.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="13.0" layoutY="59.0" onMouseClicked="#LogOutClick" prefHeight="26.0" prefWidth="76.0" text="Log out" textFill="#ee2b2b" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Separator layoutX="1.0" layoutY="82.0" prefHeight="18.0" prefWidth="1044.0" />
+      <TabPane layoutX="-2.0" layoutY="142.0" prefHeight="532.0" prefWidth="1050.0" stylesheets="@../css/tabPane.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Exam">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="78.0" fitWidth="76.0" layoutX="257.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/TestLogo.png" />
+                           </image>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="137.0" layoutX="390.0" layoutY="262.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" width="159.0">
+                           <fill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#b3c7d7" />
+                                    <Stop color="#6a7279" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </fill>
+                        </Rectangle>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="137.0" layoutX="41.0" layoutY="264.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" width="159.0">
+                           <fill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#b3c7d7" />
+                                    <Stop color="#6a7279" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </fill>
+                        </Rectangle>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="137.0" layoutX="41.0" layoutY="113.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" width="159.0">
+                           <fill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#b3c7d7" />
+                                    <Stop color="#6a7279" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </fill>
+                        </Rectangle>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="137.0" layoutX="215.0" layoutY="264.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" width="159.0">
+                           <fill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#b3c7d7" />
+                                    <Stop color="#6a7279" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </fill>
+                        </Rectangle>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="137.0" layoutX="214.0" layoutY="112.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" width="159.0">
+                           <fill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#b3c7d7" />
+                                    <Stop color="#6a7279" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </fill>
+                        </Rectangle>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="137.0" layoutX="391.0" layoutY="112.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" width="159.0">
+                           <fill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#b3c7d7" />
+                                    <Stop color="#6a7279" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </fill>
+                        </Rectangle>
+                        <Button fx:id="CreateExambtn" layoutX="67.0" layoutY="169.0" mnemonicParsing="false" onAction="#CreateExamClick" text="Create Exam">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="EditExambtn" layoutX="250.0" layoutY="169.0" mnemonicParsing="false" onAction="#EditExamClick" text="Edit Exam">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="LiveExambtn" layoutX="248.0" layoutY="314.0" mnemonicParsing="false" onAction="#LiveExamClick" text="Live Exam">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="CheckExambtn" layoutX="69.0" layoutY="314.0" mnemonicParsing="false" onAction="#CheckExamClick" text="Check Exam">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="UploadExambtn" layoutX="414.0" layoutY="167.0" mnemonicParsing="false" onAction="#UploadExamClick" text="Upload Exam">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="ApplyCodebtn" layoutX="398.0" layoutY="314.0" mnemonicParsing="false" onAction="#ApplyCodeClick" text="Apply Exam Code">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Questions">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="161.0" layoutX="54.0" layoutY="177.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" width="184.0">
+                           <fill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#b3c7d7" />
+                                    <Stop color="#6a7279" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </fill>
+                        </Rectangle>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="161.0" layoutX="254.0" layoutY="177.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" width="184.0">
+                           <fill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#b3c7d7" />
+                                    <Stop color="#6a7279" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </fill>
+                        </Rectangle>
+                        <Button fx:id="CrtQstBtn" layoutX="75.0" layoutY="239.0" mnemonicParsing="false" onAction="#CreateQuestion" text="Create Question">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="EditQstBtn" layoutX="284.0" layoutY="239.0" mnemonicParsing="false" onAction="#EditQuestionClick" text="Edit Question">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="79.0" fitWidth="84.0" layoutX="205.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/QuestionLogo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="StatisticsTab" onSelectionChanged="#SelectedStatisticsTab" text="Statistics">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblViewExams" layoutX="163.0" layoutY="104.0" prefHeight="274.0" prefWidth="695.0" stylesheets="@../css/TableView.css">
+                          <columns>
+                            <TableColumn fx:id="TestIdCol" prefWidth="232.0" text="Test ID" />
+                            <TableColumn fx:id="ProfCol" prefWidth="214.0" text="Profession" />
+                              <TableColumn fx:id="CourseCol" prefWidth="248.0" text="Course" />
+                          </columns>
+                        </TableView>
+                        <ImageView fitHeight="58.0" fitWidth="63.0" layoutX="486.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/StatisticLogo.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="164.0" layoutY="76.0" text="Select test from the table below:">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnShowStats" layoutX="468.0" layoutY="386.0" mnemonicParsing="false" onAction="#ShowStatisticClick" prefHeight="58.0" prefWidth="143.0" text="Show Statistics">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="myProfileTab" onSelectionChanged="#SelectMyProfile" text="My Profile">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtLastName" editable="false" layoutX="205.0" layoutY="183.0" />
+                        <TextField fx:id="txtFirstName" editable="false" layoutX="205.0" layoutY="133.0" />
+                        <Label layoutX="80.0" layoutY="133.0" text="First Name:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="81.0" layoutY="183.0" text="Last Name:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtPhone" layoutX="205.0" layoutY="233.0" />
+                        <Label layoutX="81.0" layoutY="233.0" text="Phone number:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtEmail" layoutX="204.0" layoutY="283.0" />
+                        <Label layoutX="80.0" layoutY="283.0" text="Email:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtAddress" layoutX="204.0" layoutY="333.0" />
+                        <Label layoutX="80.0" layoutY="333.0" text="Address:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnUpdate" layoutX="205.0" layoutY="383.0" mnemonicParsing="false" onAction="#UpdateClick" text="Update">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="118.0" fitWidth="125.0" layoutX="197.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/ProfileLogo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="btnExit" layoutX="982.0" layoutY="627.0" mnemonicParsing="false" onAction="#ExitBtn" style="-fx-background-color: LIGHTGREY;" text="Exit" textFill="#ff1919">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,10 @@
+.button {
+    -fx-font-size: 12pt;
+ -fx-font-weight: bold;
+    -fx-pref-width: 70px;
+    -fx-pref-height: 40px;
+    -fx-min-height: -fx-pref-height;
+    -fx-max-height: -fx-pref-height;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+}
